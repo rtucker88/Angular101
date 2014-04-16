@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <title>My First Angular App</title>
 </head>
-<body>
-<div>
-    Hello World!
+<body data-ng-app="myFirstApp">
+<div data-ng-controller="firstCtrl">
+    My service value is: {{ shared.hello }}
+    <input type="text" data-ng-model="shared.hello">
+</div>
+<div data-ng-controller="secondCtrl">
+    My service value is: {{ shared2.hello }}
+    <input type="text" data-ng-model="shared2.hello">
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
 <script src="angular101.js"></script>
